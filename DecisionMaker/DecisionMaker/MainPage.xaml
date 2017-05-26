@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DecisionMaker;assembly=DecisionMaker"
+             x:Class="DecisionMaker.MainPage">
+
+    <StackLayout Margin="15,15">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <Entry Grid.Column="0"
+                   x:Name="itemName"/>
+
+            <Button Text="+"
+                    x:Name="btn_AddItem"
+                    Grid.Column="1"
+                    BackgroundColor="ForestGreen"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Clicked="btn_AddItem_Clicked"/>
+            
+            <Button Text="C"
+                    x:Name="btn_clearItems"
+                    Grid.Column="2"
+                    BackgroundColor="RosyBrown"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Clicked="btn_clearItems_Clicked"/>
+
+        </Grid>
+
+        <ListView x:Name="itemList"/>
+
+        <Label Text=""
+               FontSize="35"
+               TextColor="Red"
+               HorizontalOptions="Center"
+               x:Name="decWarning" />
+
+        <Button Text="Decide for me"
+                BorderColor="Teal"
+                BackgroundColor="Teal"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Margin="25"
+                BorderRadius="60"
+                WidthRequest="90"
+                HeightRequest="90"
+                x:Name="btn_Decision"
+                Clicked="btn_Decision_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>
